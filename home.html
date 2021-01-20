@@ -25,7 +25,7 @@
                   <li><a href="#about">About</a></li>
                   <li><a href="#projects">Projects</a></li>
                   <li><a href="img/CV.png" target="_blank">CV</a></li>
-                  <li><a href="#">Github</a></li>
+                  <li><a href="https://github.com/roryeddleston" target="_blank">Github</a></li>
                </ul>
             </div>
          </nav>
@@ -77,7 +77,7 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-1">
                      <div class="card__cta">
-                        <a href="Rock, paper, scissors/index.html" target=”_blank” class="btn btn--white">Take me there!</a>
+                        <a href="https://ecstatic-ritchie-29fe31.netlify.app/" target=”_blank” class="btn btn--white">Take me there!</a>
                         <a href="https://github.com/roryeddleston/mebudget-app/tree/master" target="_blank" class="btn btn--dark">View code</a>
                      </div>
                   </div>
@@ -105,8 +105,8 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-2">
                      <div class="card__cta">
-                        <a href="Pig Game/index.html" target=”_blank” class="btn btn--white">Take me there!</a>
-                        <a href="#popup" class="btn btn--dark">View code</a>
+                        <a href="https://peaceful-engelbart-b35fbe.netlify.app" target=”_blank” class="btn btn--white">Take me there!</a>
+                        <a href="https://github.com/roryeddleston/pig-game" target=”_blank” class="btn btn--dark">View code</a>
                      </div>
                   </div>
                </div>
@@ -131,8 +131,8 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-3">
                      <div class="card__cta">
-                        <a href="snake.html" target=”_blank” class="btn btn--white">Take me there!</a>
-                        <a href="#popup" class="btn btn--dark">View code</a>
+                        <a href="#" target=”_blank” class="btn btn--white">Take me there!</a>
+                        <a href="#" class="btn btn--dark">View code</a>
                      </div>
                   </div>
                </div>
@@ -169,8 +169,8 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-4">
                      <div class="card__cta">
-                        <a href="#popup" class="btn btn--white">Take me there!</a>
-                        <a href="#popup" class="btn btn--dark">View code</a>
+                        <a href="https://blissful-bohr-6c57a6.netlify.app" target="_blank" class="btn btn--white">Take me there!</a>
+                        <a href="https://github.com/roryeddleston/rock-paper-scissors" target="_blank" class="btn btn--dark">View code</a>
                      </div>
                   </div>
                </div>
@@ -195,8 +195,8 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-5">
                      <div class="card__cta">
-                        <a href="#popup" class="btn btn--white">Take me there!</a>
-                        <a href="#popup" class="btn btn--dark">View code</a>
+                        <a href="#" class="btn btn--white">Take me there!</a>
+                        <a href="#" class="btn btn--dark">View code</a>
                      </div>
                   </div>
                </div>
@@ -221,8 +221,8 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-6">
                      <div class="card__cta">
-                        <a href="#popup" class="btn btn--white">Take me there!</a>
-                        <a href="#popup" class="btn btn--dark">View code</a>
+                        <a href="#header" class="btn btn--white">Take me there!</a>
+                        <a href="https://github.com/roryeddleston/portfolio" target="_blank" class="btn btn--dark">View code</a>
                      </div>
                   </div>
                </div>
@@ -234,6 +234,13 @@
       <footer>
          <p>Copyright &copy; 2021 by Rory Eddleston. All rights reserved. Open source video background created by GamOI.</p>
       </footer>
-      <script src="app.js"></script>
+      <script>
+         const toggleButton = document.getElementsByClassName('toggle--button')[0]
+         const navbarLinks = document.getElementsByClassName('navbar__links')[0]
+
+         toggleButton.addEventListener('click', () => {
+         navbarLinks.classList.toggle('active')
+         })
+      </script>
    </body>
 </html>

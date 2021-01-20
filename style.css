@@ -18,6 +18,17 @@ body {
     color: #777;
     padding: 2rem;
     box-sizing: border-box;
+    --card--one--1: color
+
+}
+
+:root {
+  --card-1-color: linear-gradient(to right bottom, #14724bda, #023a10da);
+  --card-2-color: linear-gradient(to right bottom, #ffb900, #ff7730);
+  --card-3-color: linear-gradient(to right bottom, #2998ff, #5643fa);
+  --card-4-color: linear-gradient(to right bottom, #9eebeb, #27a0a0);
+  --card-5-color: linear-gradient(to right bottom, #c69fdf, #783497);
+  --card-6-color: linear-gradient(to right bottom, #dbd965, #b1a110);
 }
 
 /*      HEADER      */
@@ -443,27 +454,27 @@ transform: scaleX(1.2);
           }
                     
           .card__side--back-1 {
-            background-image: linear-gradient(to right bottom, #14724bda, #023a10da);
+            background-image: var(--card-1-color);
           }
           
           .card__side--back-2 {
-            background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+            background-image: var(--card-2-color);
           }
           
           .card__side--back-3 {
-            background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+            background-image: var(--card-3-color);
           }
 
           .card__side--back-4 {
-            background-image: linear-gradient(to right bottom, #c69fdf, #783497);
+            background-image: var(--card-4-color);
           }
           
           .card__side--back-5 {
-            background-image: linear-gradient(to right bottom, #9eebeb, #27a0a0);
+            background-image: var(--card-5-color);
           }
           
           .card__side--back-6 {
-            background-image: linear-gradient(to right bottom, #8bddbb, #25af48);
+            background-image: var(--card-6-color);
           }
           
           .card:hover .card__side--front {
@@ -484,27 +495,29 @@ transform: scaleX(1.2);
           }
                     
           .card__picture--1 {
-            background-image: linear-gradient(to right bottom, #14724b, #023a10), url(img/mebudget-background.png);
+            background-image: var(--card-1-color), url(img/mebudget-background.png);
             opacity: 50%;
           }
+
           .card__picture--2 {
-            background-image: linear-gradient(to right bottom, #ffee00, #ff7730), url(img/pig-background.jpg);
+            background-image: var(--card-2-color), url(img/pig-background.jpg);
           }
           
           .card__picture--3 {
-            background-image: linear-gradient(to right bottom, #2f87da, #434ffa), url(img/tamelow.png);
+            background-image: var(--card-3-color), url(img/tamelow.png);
           }
 
           .card__picture--4 {
-            background-image: linear-gradient(to right bottom, #dfcaec, #783497), url(img/rock-background.png);
+            background-image: var(--card-4-color), url(img/rock-background.png);
             background-size: unset;
           }
+          
           .card__picture--5 {
-            background-image: linear-gradient(to right bottom, #9eebeb, #27a0a0), url(img/snake-background.png);
+            background-image: var(--card-5-color), url(img/snake-background.png);
           }
           
           .card__picture--6 {
-            background-image: linear-gradient(to right bottom, #8bddbb, #25af48), url(img/portfolio.png);
+            background-image: var(--card-6-color), url(img/portfolio.png);
           }
           
           .card__heading {
@@ -526,26 +539,28 @@ transform: scaleX(1.2);
           }
           
           .card__heading__span--1 {
-            background-image: linear-gradient(to right bottom, #4e9c91, #2c536d);
+            background-image: var(--card-1-color);
           }
           .card__heading__span--2 {
-            background-image: linear-gradient(to right bottom, rgba(255, 153, 0, 0.85), rgba(255, 72, 48, 0.85));
+            background-image: var(--card-2-color);
           }
           
           .card__heading__span--3 {
-            background-image: linear-gradient(to right bottom, rgba(76, 154, 226, 0.85), rgba(54, 41, 173, 0.85));
+            background-image: var(--card-3-color);
           }
 
           .card__heading__span--4 {
-            background-image: linear-gradient(to right bottom, #bc85e0, #783497);
+            background-image: var(--card-4-color);
           }
+          
           .card__heading__span--5 {
-            background-image: linear-gradient(to right bottom, #9eebeb, #27a0a0);
+            background-image: var(--card-5-color);
           }
           
           .card__heading__span--6 {
-            background-image: linear-gradient(to right bottom, #47d49a, #08551b);
+            background-image: var(--card-6-color);
           }
+          
           
           .card__details {
             padding: 3rem;
