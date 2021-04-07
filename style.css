@@ -305,7 +305,7 @@ transform: scaleX(1.2);
 /*      ABOUT      */
 
 .about {
-    margin: 0 4rem 20rem 4rem;
+    margin: 0 5rem 20rem 5rem;
     display: flex;
     text-align: center;
     font-size: 2rem;
@@ -345,7 +345,7 @@ transform: scaleX(1.2);
 }
 
 .about__logo__container > img {
-    height: 100px;
+    height: 12rem;
     padding: 1rem;
 }
 
