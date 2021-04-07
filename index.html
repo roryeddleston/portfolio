@@ -35,14 +35,14 @@
             <a href="https://www.linkedin.com/in/rory-eddleston-5a5001a1/" class="btn btn--white btn--animated" target="_blank">Get in touch</a>
          </div>
       </header>
-      <section class="about" id="about">
+      <section class="about section" id="about">
          <div class="about__text__container">
             <h2>Currently looking for work</h2>
             <p>Decided to leave my job in finance last year, in order to pursue a career in web development. Over this time I have been teaching myself through online courses, tutorials and personal projects. My main focus has been on CSS and vanilla Javascript, however I recently started a course on react. Although I still continue to update my portfolio with new projects. <br> <br>Keen to develop my skills further and learn the latest technologies/frameworks and best practices. Currently looking for a junior developer role, available to start immediately.</p>
             <a class="contact" href="mailto:rory_94@live.co.uk"><img src="img/email-red.png" alt="Email Logo"></a>
             <a class="contact" href="https://www.linkedin.com/in/rory-eddleston-5a5001a1/" target="_blank"><img src="img/linkedin-logo.png" alt="LinkedIn Logo"></a>
          </div>
-         <div class="about__logo__container">
+         <div class="about__logo__container section">
             <img src="img/css.png" alt="CSS Logo" class="logo">
             <img src="img/js.png" alt="Javascript Logo" class="logo">
             <img src="img/html.png" alt="HTML Logo" class="logo">
@@ -50,7 +50,7 @@
             <img src="img/bootstrap.gif" alt="Bootstrap Logo" class="logo">
          </div>
       </section>
-      <section class="section__main-projects" id="projects">
+      <section class="section__main-projects section" id="projects">
          <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary heading-secondary-1">Main projects</h2>
          </div>
@@ -240,6 +240,8 @@
 
 
       <script>
+
+         // Hamburger dropdown
          const toggleButton = document.getElementsByClassName('toggle--button')[0]
          const navbarLinks = document.getElementsByClassName('navbar__links')[0]
 
@@ -247,15 +249,45 @@
          navbarLinks.classList.toggle('active')
          })
 
-         document.querySelector('.nav--link').addEventListener('click', function(e) {
-  e.preventDefault();
+         // Smooth scroll
 
-  // Matching strategy
-  if (e.target.classList.contains('nav--link')) {
-    const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  }
+
+         document.querySelectorAll('.nav--link').forEach(function(el) {
+         el.addEventListener('click', function(e) {
+         e.preventDefault();
+
+         // Matching strategy
+         if (e.target.classList.contains('nav--link')) {
+            const id = e.target.getAttribute('href');
+            document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+            }
+         })
+         })
+
+///////////////////////////////////////
+// Reveal sections
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = function(entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15
 });
+
+allSections.forEach(function(section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
+
+
 
       </script>
    </body>

@@ -5,7 +5,9 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
-document.querySelector('.nav__links').addEventListener('click', function(e) {
+document.querySelector('.nav__links').forEach(function() {
+
+  document.querySelector('.nav__links').addEventListener('click', function(e) {
   e.preventDefault();
 
   // Matching strategy
@@ -13,4 +15,5 @@ document.querySelector('.nav__links').addEventListener('click', function(e) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
-});
+})
+})
