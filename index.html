@@ -11,22 +11,24 @@
    </head>
    <body id="body">
       <header class="header" id="header">
-         <nav class="navbar">
-            <img src="img/r-logo.png" alt="R Logo" class="r-logo">
-            <a href="#" class="toggle--button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            </a>
-            <div class="navbar__links">
-               <ul class="nav--links" >
-                  <li><a class="smooth" href="#about">About</a></li>
-                  <li><a class="smooth" href="#projects">Projects</a></li>
-                  <li><a href="img/Rory_Eddleston_CV.pdf" target="_blank">CV</a></li>
-                  <li><a href="https://github.com/roryeddleston" target="_blank">Github</a></li>
-               </ul>
-            </div>
-         </nav>
+
+            <div class="navbar-area">
+                  <div class="container">
+                    <nav class="site-navbar">
+                      <img src="img/r-logo.png" class="site-logo"></a>
+                      <ul>
+                           <li><a class="smooth" href="#about">About</a></li>
+                           <li><a class="smooth" href="#projects">Projects</a></li>
+                           <li><a href="img/Rory_Eddleston_CV.pdf" target="_blank">CV</a></li>
+                           <li><a id="last" href="https://github.com/roryeddleston" target="_blank">Github</a></li>
+                      </ul>
+                      <button class="nav-toggler">
+                        <span></span>
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+
          <div class="header__text-box">
             <h1 class="heading-primary">
                <span class="heading-primary--main">Rory Eddleston</span>
@@ -37,7 +39,10 @@
       </header>
       <section class="about section" id="about">
          <div class="about__text__container">
-            <h2>Currently looking for work</h2>
+               <h2><span
+                  class="txt-rotate"
+                  data-period="100"
+                  data-rotate='["Currently looking for work"]'></span></h2>
             <p>Decided to leave my job in finance last year, in order to pursue a career in web development. Over this time I have been teaching myself through online courses, tutorials and personal projects. My main focus has been on CSS and vanilla Javascript, however I recently started a course on react. I try to consistently update my portfolio with new projects. <br> <br>Keen to develop my skills further and learn the latest technologies/frameworks and best practices. Currently looking for a junior developer role, available to start immediately.</p>
             <a class="contact" href="mailto:rory_94@live.co.uk"><img src="img/email-red.png" alt="Email Logo"></a>
             <a class="contact" href="https://www.linkedin.com/in/rory-eddleston-5a5001a1/" target="_blank"><img src="img/linkedin-logo.png" alt="LinkedIn Logo"></a>
@@ -241,13 +246,42 @@
 
       <script>
 
-         // Hamburger dropdown
-         const toggleButton = document.getElementsByClassName('toggle--button')[0]
-         const navbarLinks = document.getElementsByClassName('navbar__links')[0]
+                     // define all UI variable
+            const navToggler = document.querySelector('.nav-toggler');
+            const navMenu = document.querySelector('.site-navbar ul');
+            const navLinks = document.querySelectorAll('.site-navbar a');
 
-         toggleButton.addEventListener('click', () => {
-         navbarLinks.classList.toggle('active')
-         })
+            // load all event listners
+            allEventListners();
+
+            // functions of all event listners
+            function allEventListners() {
+            // toggler icon click event
+            navToggler.addEventListener('click', togglerClick);
+            // nav links click event
+            navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
+            }
+
+            // togglerClick function
+            function togglerClick() {
+            navToggler.classList.toggle('toggler-open');
+            navMenu.classList.toggle('open');
+            }
+
+            // navLinkClick function
+            function navLinkClick() {
+            if(navMenu.classList.contains('open')) {
+               navToggler.click();
+            }
+            }
+
+         // // Hamburger dropdown
+         // const toggleButton = document.getElementsByClassName('toggle--button')[0]
+         // const navbarLinks = document.getElementsByClassName('navbar__links')[0]
+
+         // toggleButton.addEventListener('click', () => {
+         // navbarLinks.classList.toggle('active')
+         // })
 
          // Smooth scroll
 
@@ -286,6 +320,65 @@ allSections.forEach(function(section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
+
+
+// Typing annimation
+
+
+const TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  const i = this.loopNum % this.toRotate.length;
+  const fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  let that = this;
+  let delta = 150 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  const elements = document.getElementsByClassName('txt-rotate');
+  for (let i=0; i<elements.length; i++) {
+    const toRotate = elements[i].getAttribute('data-rotate');
+    const period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+
+};
+
+// typing end
 
 
 

@@ -1,2 +1,2 @@
 # Portfolio website
-Websites displaying the current projects that I've made. New projects reflected upon completion.
+Websites displaying the current projects that I've made. New projects added upon completion.
