@@ -64,7 +64,7 @@ body {
 }
 
 .r-logo {
-  margin: 2em;
+  margin: 3rem;
   height: 50px;
   opacity: 90%;
 }
@@ -335,18 +335,20 @@ transform: scaleX(1.2);
 }
 
 .contact img {
-  height: 50px;
-  padding-right: 15px;
-  margin-top: 20px;
+  height: 5rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
 }
 
 .about__logo__container {
   flex: 1;
+
 }
 
 .about__logo__container > img {
     height: 12rem;
-    padding: 1rem;
+    padding: 2rem;
+    margin: 1.2rem;
 }
 
 .logo:hover {
@@ -714,6 +716,7 @@ footer {
 }
 .row {
   min-width: 46rem;
+  max-width: 550px;
   padding: 3rem 6rem;
   }
 }
@@ -730,3 +733,4 @@ footer {
   .row [class^="col-"] {
     width: 100% !important;
     padding: 3rem;} }
+

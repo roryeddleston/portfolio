@@ -20,8 +20,8 @@
             </a>
             <div class="navbar__links">
                <ul class="nav--links" >
-                  <li><a class="nav--link" href="#about">About</a></li>
-                  <li><a class="nav--link" href="#projects">Projects</a></li>
+                  <li><a class="smooth" href="#about">About</a></li>
+                  <li><a class="smooth" href="#projects">Projects</a></li>
                   <li><a href="img/Rory_Eddleston_CV.pdf" target="_blank">CV</a></li>
                   <li><a href="https://github.com/roryeddleston" target="_blank">Github</a></li>
                </ul>
@@ -38,7 +38,7 @@
       <section class="about section" id="about">
          <div class="about__text__container">
             <h2>Currently looking for work</h2>
-            <p>Decided to leave my job in finance last year, in order to pursue a career in web development. Over this time I have been teaching myself through online courses, tutorials and personal projects. My main focus has been on CSS and vanilla Javascript, however I recently started a course on react. Although I still continue to update my portfolio with new projects. <br> <br>Keen to develop my skills further and learn the latest technologies/frameworks and best practices. Currently looking for a junior developer role, available to start immediately.</p>
+            <p>Decided to leave my job in finance last year, in order to pursue a career in web development. Over this time I have been teaching myself through online courses, tutorials and personal projects. My main focus has been on CSS and vanilla Javascript, however I recently started a course on react. I try to consistently update my portfolio with new projects. <br> <br>Keen to develop my skills further and learn the latest technologies/frameworks and best practices. Currently looking for a junior developer role, available to start immediately.</p>
             <a class="contact" href="mailto:rory_94@live.co.uk"><img src="img/email-red.png" alt="Email Logo"></a>
             <a class="contact" href="https://www.linkedin.com/in/rory-eddleston-5a5001a1/" target="_blank"><img src="img/linkedin-logo.png" alt="LinkedIn Logo"></a>
          </div>
@@ -66,7 +66,7 @@
                      <div class="card__details">
                         <ul>
                            <li>Built using SASS</li>
-                           <li>Full responsive</li>
+                           <li>Responsive</li>
                            <li>Added javascript functionality</li>
                            <li>Multiple components</li>
                            <li>Fast</li>
@@ -103,7 +103,7 @@
                   </div>
                   <div class="card__side card__side--back card__side--back-2">
                      <div class="card__cta">
-                        <a href="https://reverent-fermi-621ce2.netlify.app" target=”_blank” class="btn btn--white">Take me there!</a>
+                        <a href="img/bank-recording.webm" target=”_blank” class="btn btn--white">Take me there!</a>
                         <a href="https://github.com/roryeddleston/bank-on-it" target=”_blank” class="btn btn--dark">View code</a>
                      </div>
                   </div>
@@ -142,7 +142,7 @@
          <div class="u-center-text u-margin-top-huge">
          </div>
       </section>
-      <section class="section__other-projects">
+      <section class="section__other-projects section">
          <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary heading-secondary-2">Other projects</h2>
          </div>
@@ -226,8 +226,8 @@
                </div>
             </div>
          </div>
-         <a class="fas fa-chevron-up" id="arrow" href="#body"></a>
-         <a id="home-shortcut" href="#body">Back to top</a>
+         <a class="fas fa-chevron-up smooth" id="arrow" href="#body"></a>
+         <a id="home-shortcut" class="smooth" href="#body">Back to top</a>
       </section>
 
       <footer>
@@ -252,12 +252,12 @@
          // Smooth scroll
 
 
-         document.querySelectorAll('.nav--link').forEach(function(el) {
+         document.querySelectorAll('.smooth').forEach(function(el) {
          el.addEventListener('click', function(e) {
          e.preventDefault();
 
          // Matching strategy
-         if (e.target.classList.contains('nav--link')) {
+         if (e.target.classList.contains('smooth')) {
             const id = e.target.getAttribute('href');
             document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
             }
