@@ -4,8 +4,6 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
-      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
       <link rel="shortcut icon" type="image/png" href="img/favicon.png">
       <script src="https://kit.fontawesome.com/dc50022cda.js" crossorigin="anonymous"></script>
@@ -13,16 +11,15 @@
    </head>
    <body id="body">
       <header class="header" id="header">
-
             <div class="navbar-area">
                   <div class="container">
                     <nav class="site-navbar">
-                      <img src="img/r-logo.png" class="site-logo"></a>
+                      <img src="img/r-logo.png" class="logo"></a>
                       <ul>
-                           <li><a class="smooth" href="#about">About</a></li>
-                           <li><a class="smooth" href="#projects">Projects</a></li>
-                           <li><a href="/img/Rory_Eddleston_CV.pdf" target="_blank">CV</a></li>
-                           <li><a id="last" href="https://github.com/roryeddleston" target="_blank">Github</a></li>
+                          <li><a class="smooth" href="#about">About</a></li>
+                          <li><a class="smooth" href="#projects">Projects</a></li>
+                          <li><a href="/img/Rory_Eddleston_CV.pdf" target="_blank">CV</a></li>
+                          <li><a id="last" href="https://github.com/roryeddleston" target="_blank">Github</a></li>
                       </ul>
                       <button class="nav-toggler">
                         <span></span>
@@ -40,14 +37,13 @@
          </div>
             <img class="brackets__image" src="/img/brackets.png">
             <img class="binary__image" src="/img/binary-code.png">
-
       </header>
       <section class="about section" id="about">
          <div class="about__text__container">
                <h2>Currently looking for work</h2>
-            <p>Decided to leave my job in finance last year, in order to pursue a career in web development. My main focus has been on CSS and vanilla Javascript, however I recently started a course on react. I try to consistently update my portfolio with new projects. <br> <br>Keen to develop my skills further and learn the latest technologies/frameworks and best practices. Currently looking for a junior developer role, <span id="availability">available to start immediately</span>.</p>
+            <p>Decided to leave my job in finance last year, in order to pursue a career in web development. My main focus has been on CSS and vanilla Javascript, however I recently started a course on react. <br> <br>Keen to develop my skills further and learn the latest technologies/frameworks and best practices. Currently looking for a junior developer role, <span id="availability">available to start immediately</span>.</p>
          </div>
-         <div class="about__logo__container section">
+         <div class="about__logo__container">
             <img src="img/css.png" alt="CSS Logo" class="logo">
             <img src="img/js.png" alt="Javascript Logo" class="logo">
             <img src="img/html.png" alt="HTML Logo" class="logo">
@@ -55,164 +51,137 @@
             <img src="img/bootstrap.gif" alt="Bootstrap Logo" class="logo">
          </div>
       </section>
-      <section class="section__main-projects section" id="projects">
-         <div class="u-center-text u-margin-bottom-big">
-            <h2 class="heading-secondary heading-secondary-1">Main projects</h2>
-         </div>
-         <div class="row">
-            <div class="col-1-of-3">
-               <div class="card">
-                  <div class="card__side card__side--front">
-                     <div class="card__picture card__picture--1">
-                     </div>
-                     <h4 class="card__heading">
-                        <span class="card__heading-span card__heading__span--1">Tamelow</span>
-                     </h4>
-                     <div class="card__details">
-                        <ul>
-                           <li>Built using SASS</li>
-                           <li>Responsive</li>
-                           <li>Added javascript functionality</li>
-                           <li>Multiple components</li>
-                           <li>Fast</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="card__side card__side--back card__side--back-1">
-                     <div class="card__cta">
-                        <a href="https://objective-davinci-79f5bf.netlify.app" target=”_blank” class="btn btn--white">Take me there!</a>
-                        <a href="https://github.com/roryeddleston/tamelow" target="_blank" class="btn btn--dark">View code</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
+      <section class="projects section" >
+         <h1 class="card__heading" id="projects">Projects</h1>
+         <div class="cards__container">
+            <div class="cards">
+              <div class="card-item">
 
-
-            <div class="col-1-of-3">
-               <div class="card">
-                  <div class="card__side card__side--front">
-                     <div class="card__picture card__picture--2">
-                     </div>
-                     <h4 class="card__heading">
-                        <span class="card__heading-span card__heading__span--2">Bank on it</span>
-                     </h4>
-                     <div class="card__details">
-                        <ul>
-                           <li>Banking application</li>
-                           <li>Transfer funds</li>
-                           <li>Different currencies</li>
-                           <li>Login authentication</li>
-                           <li>Complex array methods</li>
-                        </ul>
-                     </div>
+                  <div class="card__cta">
+                     <a href="https://objective-davinci-79f5bf.netlify.app" target=”_blank” class="btn btn--white">Take me there!</a>
+                     <a href="https://github.com/roryeddleston/tamelow" target="_blank" class="btn btn--dark">View code</a>
                   </div>
-                  <div class="card__side card__side--back card__side--back-2">
-                     <div class="card__cta">
-                        <a href="img/bank-recording.webm" target=”_blank” class="btn btn--white">Take me there!</a>
-                        <a href="https://github.com/roryeddleston/bank-on-it" target=”_blank” class="btn btn--dark">View code</a>
-                     </div>
+                <div class="card-image card-hover">
+                  <img src="/img/tamelow-screenshot.png" alt="Screenshot of tamelow website">
+                </div>
+                <div class="card-info card-hover">
+                  <h2 class="card-title">Tamelow</h2>
+                  <div class="card__details">
+                     <ul>
+                        <li>Built using SASS</li>
+                        <li>Responsive</li>
+                        <li>Added javascript functionality</li>
+                        <li>Multiple components</li>
+                        <li>Fast</li>
+                     </ul>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
-            <div class="col-1-of-3">
-               <div class="card">
-                  <div class="card__side card__side--front">
-                     <div class="card__picture card__picture--3">
-                     </div>
-                     <h4 class="card__heading">
-                        <span class="card__heading-span card__heading__span--3">mebudget</span>
-                     </h4>
-                     <div class="card__details">
-                        <ul>
-                           <li>Expense/income tracker</li>
-                           <li>Vanilla Javascript</li>
-                           <li>Fully formatted</li>
-                           <li>Date automatically updates</li>
-                           <li>Responsive</li>
-                        </ul>
-                     </div>
+            <div class="cards">
+              <div class="card-item">
+                  <div class="card__cta">
+                     <a href="img/bank-recording.webm" target=”_blank” class="btn btn--white">Take me there!</a>
+                     <a href="https://github.com/roryeddleston/bank-on-it" target=”_blank” class="btn btn--dark">View code</a>
                   </div>
-                  <div class="card__side card__side--back card__side--back-3">
-                     <div class="card__cta">
-                        <a href="https://ecstatic-ritchie-29fe31.netlify.app" target=”_blank” class="btn btn--white">Take me there!</a>
-                        <a href="https://github.com/roryeddleston/mebudget-app" target="_blank"  class="btn btn--dark">View code</a>
-                     </div>
+                <div class="card-image card-hover">
+                     <img src="/img/bank-screenshot.png" alt="Screenshot of banking website">
+                </div>
+                <div class="card-info card-hover">
+                  <h2 class="card-title">Bank on it</h2>
+                  <div class="card__details">
+                     <ul>
+                        <li>Banking application</li>
+                        <li>Transfer funds</li>
+                        <li>Different currencies</li>
+                        <li>Login authentication</li>
+                        <li>Complex array methods</li>
+                     </ul>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
-
-
-
-         </div>
-         <div class="u-center-text u-margin-top-huge">
-         </div>
-      </section>
-      <section class="section__other-projects section">
-         <div class="u-center-text u-margin-bottom-big">
-            <h2 class="heading-secondary heading-secondary-2">Other projects</h2>
-         </div>
-         <div class="row">
-            <div class="col-1-of-3">
-               <div class="card">
-                  <div class="card__side card__side--front">
-                     <div class="card__picture card__picture--4">
-                     </div>
-                     <h4 class="card__heading">
-                        <span class="card__heading-span card__heading__span--4">TrackMe</span>
-                     </h4>
-                     <div class="card__details">
-                        <ul>
-                           <li>Data from maps API</li>
-                           <li>Pin workouts on map</li>
-                           <li>Select different workouts</li>
-                           <li>Determines current location</li>
-                           <li>Error handling</li>
-                        </ul>
-                     </div>
+            <div class="cards">
+              <div class="card-item">
+                  <div class="card__cta">
+                     <a href="https://ecstatic-ritchie-29fe31.netlify.app" target=”_blank” class="btn btn--white">Take me there!</a>
+                     <a href="https://github.com/roryeddleston/mebudget-app" target="_blank"  class="btn btn--dark">View code</a>
                   </div>
-                  <div class="card__side card__side--back card__side--back-4">
-                     <div class="card__cta">
-                        <a href="https://angry-pasteur-c2df49.netlify.app" target="_blank" class="btn btn--white">Take me there!</a>
-                        <a href="https://github.com/roryeddleston/trackme" target="_blank" class="btn btn--dark">View code</a>
-                     </div>
+                <div class="card-image card-hover">
+                     <img src="/img/mebudget-background.png" alt="Screenshot of meBudget website">
+                </div>
+                <div class="card-info card-hover">
+                  <h2 class="card-title">meBudget</h2>
+                  <div class="card__details">
+                     <ul>
+                        <li>Expense/income tracker</li>
+                        <li>Vanilla Javascript</li>
+                        <li>Fully formatted</li>
+                        <li>Date automatically updates</li>
+                        <li>Responsive</li>
+                     </ul>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
-            <div class="col-1-of-3">
-               <div class="card">
-                  <div class="card__side card__side--front">
-                     <div class="card__picture card__picture--5">
-                     </div>
-                     <h4 class="card__heading">
-                        <span class="card__heading-span card__heading__span--5">Rock, paper scissors</span>
-                     </h4>
-                     <div class="card__details">
-                        <ul>
-                           <li>Beautiful UI</li>
-                           <li>Vanilla Javascript</li>
-                           <li>2 player</li>
-                           <li>Fully Responsive</li>
-                           <li>Typing annimation</li>
-                        </ul>
-                     </div>
+            <div class="cards">
+              <div class="card-item">
+                  <div class="card__cta">
+                     <a href="https://angry-pasteur-c2df49.netlify.app" target="_blank" class="btn btn--white">Take me there!</a>
+                     <a href="https://github.com/roryeddleston/trackme" target="_blank" class="btn btn--dark">View code</a>
                   </div>
-                  <div class="card__side card__side--back card__side--back-5">
-                     <div class="card__cta">
-                        <a href="https://blissful-bohr-6c57a6.netlify.app" target="_blank"  class="btn btn--white">Take me there!</a>
-                        <a href="https://github.com/roryeddleston/rock-paper-scissors" target="_blank" class="btn btn--dark">View code</a>
-                     </div>
+                <div class="card-image card-hover">
+                     <img src="/img/trackme-screenshot.png" alt="Screenshot of exercise tracker website">
+                </div>
+                <div class="card-info card-hover">
+                  <h2 class="card-title">Exercise Tracker</h2>
+                  <div class="card__details">
+                     <ul>
+                        <li>Data from maps API</li>
+                        <li>Pin workouts on map</li>
+                        <li>Select different workouts</li>
+                        <li>Determines current location</li>
+                        <li>Error handling</li>
+                     </ul>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
-            <div class="col-1-of-3">
-               <div class="card">
-                  <div class="card__side card__side--front">
-                     <div class="card__picture card__picture--6">
-                     </div>
-                     <h4 class="card__heading">
-                        <span class="card__heading-span card__heading__span--6">Todooey</span>
-                     </h4>
-                     <div class="card__details">
+            <div class="cards">
+              <div class="card-item">
+                  <div class="card__cta">
+                     <a href="https://blissful-bohr-6c57a6.netlify.app" target="_blank"  class="btn btn--white">Take me there!</a>
+                     <a href="https://github.com/roryeddleston/rock-paper-scissors" target="_blank" class="btn btn--dark">View code</a>
+                  </div>
+                <div class="card-image card-hover">
+                     <img src="/img/rock-screenshot.png" alt="Screenshot of rock, paper, scissors website">
+                </div>
+                <div class="card-info card-hover">
+                  <h2 class="card-title">Rock, paper, scissors</h2>
+                  <div class="card__details">
+                     <ul>
+                        <li>Beautiful UI</li>
+                        <li>Vanilla Javascript</li>
+                        <li>2 player</li>
+                        <li>Fully Responsive</li>
+                        <li>Typing annimation</li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="card-item">
+                  <div class="card__cta">
+                     <a href="https://agitated-lovelace-15e340.netlify.app/" target="_blank" class="btn btn--white">Take me there!</a>
+                     <a href="https://github.com/roryeddleston/todooey" target="_blank" class="btn btn--dark">View code</a>
+                  </div>
+                <div class="card-image card-hover">
+                     <img src="/img/todoodey-screenshot.png" alt="Screenshot of to do website">
+                </div>
+                <div class="card-info card-hover">
+                  <h2 class="card-title">Todooey</h2>
+                  <div class="card__details">
                         <ul>
                            <li>To do list</li>
                            <li>Full responsive</li>
@@ -221,16 +190,10 @@
                            <li>Fast</li>
                         </ul>
                      </div>
-                  </div>
-                  <div class="card__side card__side--back card__side--back-6">
-                     <div class="card__cta">
-                        <a href="https://agitated-lovelace-15e340.netlify.app/" target="_blank" class="btn btn--white">Take me there!</a>
-                        <a href="https://github.com/roryeddleston/todooey" target="_blank" class="btn btn--dark">View code</a>
-                     </div>
-                  </div>
-               </div>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
          <a class="fas fa-chevron-up smooth" id="arrow" href="#body"></a>
          <a id="home-shortcut" class="smooth" href="#body">Back to top</a>
       </section>
@@ -238,11 +201,6 @@
       <footer>
          <p>Copyright &copy; 2021 by Rory Eddleston. All rights reserved.</p>
       </footer>
-
-
-
-
-
 
       <script>
 
@@ -275,16 +233,8 @@
             }
             }
 
-         // // Hamburger dropdown
-         // const toggleButton = document.getElementsByClassName('toggle--button')[0]
-         // const navbarLinks = document.getElementsByClassName('navbar__links')[0]
-
-         // toggleButton.addEventListener('click', () => {
-         // navbarLinks.classList.toggle('active')
-         // })
 
          // Smooth scroll
-
 
          document.querySelectorAll('.smooth').forEach(function(el) {
          el.addEventListener('click', function(e) {
@@ -298,28 +248,28 @@
          })
          })
 
-///////////////////////////////////////
-// Reveal sections
-const allSections = document.querySelectorAll('.section');
+         ///////////////////////////////////////
+         // Reveal sections
+         const allSections = document.querySelectorAll('.section');
 
-const revealSection = function(entries, observer) {
-  const [entry] = entries;
+         const revealSection = function(entries, observer) {
+         const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
+         if (!entry.isIntersecting) return;
 
-  entry.target.classList.remove('section--hidden');
-  observer.unobserve(entry.target);
-};
+         entry.target.classList.remove('section--hidden');
+         observer.unobserve(entry.target);
+         };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15
-});
+         const sectionObserver = new IntersectionObserver(revealSection, {
+         root: null,
+         threshold: 0.15
+         });
 
-allSections.forEach(function(section) {
-  sectionObserver.observe(section);
-  section.classList.add('section--hidden');
-});
+         allSections.forEach(function(section) {
+         sectionObserver.observe(section);
+         section.classList.add('section--hidden');
+         });
 
 
       </script>
